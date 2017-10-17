@@ -331,6 +331,7 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
         ws?.delegate = self
         ws?.disableSSLCertValidation = selfSigned
         ws?.security = security?.security
+        ws?.timeout = 30
 
         ws?.connect()
     }
