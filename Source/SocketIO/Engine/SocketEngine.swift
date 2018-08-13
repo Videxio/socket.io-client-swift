@@ -163,10 +163,6 @@ public final class SocketEngine : NSObject, URLSessionDelegate, SocketEnginePoll
                 forceWebsockets = force
             case let .path(path):
                 socketPath = path
-
-                if !socketPath.hasSuffix("/") {
-                    socketPath += "/"
-                }
             case let .secure(secure):
                 self.secure = secure
             case let .selfSigned(selfSigned):
